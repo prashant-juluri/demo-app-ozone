@@ -1,0 +1,23 @@
+version: v1
+kind: kubernetes
+application: demo-oz
+
+targets:
+  prashant-minikube:
+    account: prashant-minikube
+    namespace: demo-oz
+    strategy: myCanary
+
+manifests:
+  - path: /.
+
+strategies:
+  myCanary:
+    canary:
+      steps:
+        - setWeight:
+            weight: 50
+        - pause:
+            untilApproved: true
+        - setWeight:
+            weight: 100
