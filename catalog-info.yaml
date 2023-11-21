@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-app-ozone
+  description: Ozones demo application for CI/CD
+spec:
+  type: website
+  lifecycle: production
+  owner: OZONE
