@@ -3,6 +3,7 @@ kind: Component
 metadata:
   name: demo-app-ozone
   description: Ozones demo application for CI/CD
+  system: Demo
 spec:
   type: website
   lifecycle: production
